@@ -1,0 +1,21 @@
+<br>
+<table class="table">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col">Person Name</th>
+			<th scope="col">Business Name</th>
+			<th scope="col">GST Number</th>
+			<th colspan="2" scope="col">Actions</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr *ngFor="let business of businesses">
+			<th scope="row">{{ business.person_name }}</th>
+			<td>{{ business.business_name }}</td>
+			<td>{{ business.business_gst_number }}</td>
+			<td><a [routerLink]="['edit',business._id]" class="btn-sm btn-primary">Edit</a></td>
+			<td><a (click)="deleteBusiness(business._id)" class="btn-sm btn-danger">Delete</a></td>
+		</tr>
+	</tbody>
+</table>

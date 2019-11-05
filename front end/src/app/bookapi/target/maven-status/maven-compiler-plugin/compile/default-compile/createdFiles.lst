@@ -1,0 +1,4 @@
+com\mogili\spring\config\MyWebAppInitializer.class
+com\mogili\spring\model\Book.class
+com\mogili\spring\config\AppConfig.class
+com\mogili\spring\config\WebConfig.class

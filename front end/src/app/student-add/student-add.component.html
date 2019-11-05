@@ -1,0 +1,58 @@
+<br>
+<div class="card">
+	<div class="card-body">
+		<form [formGroup]="angForms" novalidate>
+			<div class="form-group">
+				<label class="col-md-4">
+					Student Name
+				</label>
+				<input type="text" formControlName="name" #name class="form-control" />
+			</div>
+			<div *ngIf="angForms.controls['name'].invalid && (angForms.controls['name'].dirty || angForms.controls['name'].touched)" class="alert alert-danger">
+				<div *ngIf="angForms.controls['name'].errors.required">
+					Student Name is required.
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4">
+					Profession
+				</label>
+				<input type="text" formControlName="profession" #profession class="form-control" />
+			</div>
+			<div *ngIf="angForms.controls['profession'].invalid && (angForms.controls['profession'].dirty || angForms.controls['profession'].touched)" class="alert alert-danger">
+				<div *ngIf="angForms.controls['profession'].errors.required">
+					Profession is required.
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-4">
+					Gender
+				</label>
+				<select formControlName="gender" #gender class="form-control">
+					<option value="Male">Male</option>
+					<option value="Femle">Female</option>
+				</select>
+			</div>
+			<div *ngIf="angForms.controls['gender'].invalid && (angForms.controls['gender'].dirty || angForms.controls['gender'].touched)" class="alert alert-danger">
+				<div *ngIf="angForms.controls['gender'].errors.required">
+					Gender is required.
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-4">
+					Age
+				</label>
+				<input type="number" formControlName="age" #age class="form-control" />
+			</div>
+			<div *ngIf="angForms.controls['age'].invalid && (angForms.controls['age'].dirty || angForms.controls['age'].touched)" class="alert alert-danger">
+				<div *ngIf="angForms.controls['age'].errors.required">
+					Business GST Number is required.
+				</div>
+			</div>
+			<div class="form-group">
+				<button (click)="addUser(name.value,age.value,gender.value,profession.value)" type="submit" [disabled]="angForms.pristine || angForms.invalid" class="btn btn-primary">Add Student</button>
+			</div>
+		</form>
+	</div>
+</div>

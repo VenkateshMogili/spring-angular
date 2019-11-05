@@ -1,0 +1,15 @@
+.navbar-nav a {
+	color:white;
+}
+.navbar-nav a:hover{
+	color: #38c6d9;
+	transition:0.5s;
+}
+.login-reg{
+	margin-left:450px;
+}
+@media only screen and (min-width:500px) and (max-width:900px){
+	.login-reg{
+		margin:0px;
+	}
+}

@@ -1,0 +1,14 @@
+<br>
+<div class="row card-group">
+<div *ngFor="let profile of profiles" class="col-4 card">
+			<div class="bg-primary text-white" style="padding:10px;">
+			<h5 class="card-title" style="float:left">{{profile.person_name}}</h5>
+			<i class="fa fa-edit" style="float:right;"></i><br><br>
+		</div>
+		<div class="bg-white">
+    <img src="./assets/logo.png" style="margin:5px;width:50px;height:50px;float:left;"/>
+    <p class="card-text" style="margin:5px;">{{profile.business_name}}, {{profile.business_gst_number}}</p><br><br>
+    <a href="#" class="btn-sm btn-primary" style="float:right;">Read More>></a>
+		</div>
+</div>
+</div>
